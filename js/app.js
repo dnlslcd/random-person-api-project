@@ -6,7 +6,7 @@ const userName = document.querySelector("#first");
 const userLastName = document.querySelector("#last");
 const userCountry = document.querySelector("#country");
 const userPhone = document.querySelector("#phone");
-const userEmail = document.querySelector("#mail");
+const userEmail = document.querySelector("#email");
 
 profileGenerator.addEventListener("click", async function(){
     const response = await fetch("https://randomuser.me/api/");
@@ -21,8 +21,4 @@ profileGenerator.addEventListener("click", async function(){
     userCountry.textContent = data.results[0].location.country;
     userPhone.textContent = data.results[0].phone;
     userEmail.textContent = data.results[0].email;
-
-
-
-
 });
